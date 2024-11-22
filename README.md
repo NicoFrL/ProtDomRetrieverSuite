@@ -150,6 +150,7 @@ protdomretrieversuite
     # Example input file:
         Q02201
         P12345
+        A0AA96LI61
         
 2. Choose output directory for results (wherever you want on your computer)
 3. Enter InterPro entries for domain filtering (as indicated, one per line or separated by comma)
