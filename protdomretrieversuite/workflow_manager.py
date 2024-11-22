@@ -1,17 +1,16 @@
-# src/workflow_manager.py
+# protdomretrieversuite/workflow_manager.py
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional
 import logging
 import threading
 
-from .processors.base_processor import ProcessorConfig
-from .processors.interpro_processor import InterProProcessor, InterProConfig
-from .processors.fasta_processor import FastaProcessor, FastaConfig
-from .processors.alphafold_processor import AlphaFoldProcessor, AlphaFoldConfig
-from .processors.pdb_trimmer import PDBTrimmer, PDBTrimmerConfig
-from .utils.errors import ProcessingError, ValidationError  # Ensure this import is present
-
+from protdomretrieversuite.processors.base_processor import ProcessorConfig
+from protdomretrieversuite.processors.interpro_processor import InterProProcessor, InterProConfig
+from protdomretrieversuite.processors.fasta_processor import FastaProcessor, FastaConfig
+from protdomretrieversuite.processors.alphafold_processor import AlphaFoldProcessor, AlphaFoldConfig
+from protdomretrieversuite.processors.pdb_trimmer import PDBTrimmer, PDBTrimmerConfig
+from protdomretrieversuite.utils.errors import ProcessingError, ValidationError
 
 @dataclass
 class WorkflowConfig:

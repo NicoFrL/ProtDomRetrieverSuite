@@ -1,12 +1,12 @@
-# src/processors/base_processor.py
+# protdomretrieversuite/processors/base_processor.py
 from typing import Optional, Callable
 from dataclasses import dataclass
 from pathlib import Path
 import logging
 
-from ..utils.errors import ProcessingError, handle_processing_errors
-from ..utils.logger import LoggerSetup
-from ..utils.config import BaseConfig, ConfigManager
+from protdomretrieversuite.utils.errors import ProcessingError, handle_processing_errors
+from protdomretrieversuite.utils.logger import LoggerSetup
+from protdomretrieversuite.utils.config import BaseConfig, ConfigManager
 
 @dataclass
 class BaseConfig:

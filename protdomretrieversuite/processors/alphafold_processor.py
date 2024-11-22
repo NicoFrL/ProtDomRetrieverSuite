@@ -1,4 +1,4 @@
-# src/processors/alphafold_processor.py
+# protdomretrieversuite/processors/alphafold_processor.py
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
@@ -8,8 +8,8 @@ import re
 import requests
 import time
 
-from .base_processor import BaseProcessor, ProcessorConfig
-from ..utils.errors import (
+from protdomretrieversuite.processors.base_processor import BaseProcessor, ProcessorConfig
+from protdomretrieversuite.utils.errors import (
     handle_processing_errors,
     ProcessingError,
     APIError,

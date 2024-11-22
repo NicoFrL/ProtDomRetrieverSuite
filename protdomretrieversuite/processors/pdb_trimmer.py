@@ -1,4 +1,4 @@
-# src/processors/pdb_trimmer.py
+# protdomretrieversuite/processors/pdb_trimmer.py
 from typing import List, Dict, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass
@@ -7,8 +7,8 @@ import json
 import re
 
 
-from .base_processor import BaseProcessor, ProcessorConfig
-from ..utils.errors import (
+from protdomretrieversuite.processors.base_processor import BaseProcessor, ProcessorConfig
+from protdomretrieversuite.utils.errors import (
     handle_processing_errors,
     ProcessingError,
     ValidationError,

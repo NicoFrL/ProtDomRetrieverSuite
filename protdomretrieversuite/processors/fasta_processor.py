@@ -1,12 +1,12 @@
-# src/processors/fasta_processor.py
+# protdomretrieversuite/processors/fasta_processor.py
 from typing import List, Dict, Optional
 from pathlib import Path
 from dataclasses import dataclass
 import requests
 import time
 
-from .base_processor import BaseProcessor, ProcessorConfig
-from ..utils.errors import (
+from protdomretrieversuite.processors.base_processor import BaseProcessor, ProcessorConfig
+from protdomretrieversuite.utils.errors import (
     handle_processing_errors,
     ProcessingError,
     APIError,

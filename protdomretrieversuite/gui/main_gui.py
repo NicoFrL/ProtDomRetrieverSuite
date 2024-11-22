@@ -21,9 +21,9 @@ if sys.platform == "win32":
 from ttkthemes import ThemedTk
 
 # Local application imports
-from src.workflow_manager import WorkflowManager
-from src.processors.base_processor import ProcessorConfig
-from src.utils.errors import (
+from protdomretrieversuite.workflow_manager import WorkflowManager
+from protdomretrieversuite.processors.base_processor import ProcessorConfig
+from protdomretrieversuite.utils.errors import (
     ProcessingError,
     APIError,
     ValidationError,
