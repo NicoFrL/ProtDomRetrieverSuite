@@ -12,10 +12,16 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 
 ---
 
+
 <div align="center">
   <img src="assets/prot_dom_retriever_illustation.png" alt="ProtDomRetriever Illustration" width="400">
   <img src="assets/gui_screenshot.png" alt="GUI Screenshot" width="400">
 </div><br>
+
+<div align="center">
+  <img src="assets/prot_dom_retriever_illustation.png" alt="ProtDomRetriever Illustration" width="400">
+  <img src="assets/gui_screenshot.png" alt="GUI Screenshot" width="400">
+</div>
 
 - **ProtDomRetriever Illustration (left):** A visual representation of ProtDomRetrieverSuite’s functionality, generated using AI tools. The exact AI prompt is available in `assets/ai_prompt_example.txt`.
 - **GUI Screenshot (right):** An example of the graphical user interface of ProtDomRetrieverSuite, illustrating the input configuration, optional steps, and progress tracking.
