@@ -48,5 +48,6 @@ setup(
             'config/*.json',        # For default configs
         ],
     },
+    include_package_data=False, 
     zip_safe=False,
 )
