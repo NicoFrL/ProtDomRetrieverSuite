@@ -13,7 +13,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/NicoFrL/ProtDomRetrieverSuite",
-    packages=find_packages(where="src"),  # Locate all packages in the `src` directory
+    packages=find_packages(), 
     package_dir={"": "src"},  # Map the root package to the `src` directory
     classifiers=[
         "Development Status :: 3 - Alpha",
