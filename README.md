@@ -121,6 +121,8 @@ The application automatically saves your last used configuration (input/output p
 
 ## Usage
 
+Here are examples of entries that can be reach on InterPro database: 
+
 **[InterPro](https://www.ebi.ac.uk/training/online/courses/interpro-functional-and-structural-analysis/what-is-an-interpro-entry/interpro-entry-types/)** (e.g., `IPR000001`)  
 **[CATH-Gene3D](https://www.cathdb.info)** (e.g., `G3DSA:1.10.10.10`)  
 **[CDD](https://www.ncbi.nlm.nih.gov/cdd/)** (e.g., `cd00001`)  
