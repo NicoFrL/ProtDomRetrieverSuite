@@ -1,4 +1,4 @@
-# ProtDomRetriever Suite
+# ProtDomRetrieverSuite
 
 <div align="center">
   <img src="https://github.com/NicoFrL/ProtDomRetrieverSuite/actions/workflows/build.yml/badge.svg" alt="Build Status">
