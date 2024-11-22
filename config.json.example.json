@@ -1,0 +1,11 @@
+{
+    "input_file": "",
+    "output_dir": "",
+    "enable_fasta_retrieval": false,
+    "enable_af_download": false,
+    "enable_pdb_trimming": false,
+    "accept_custom_pdbs": false,
+    "custom_pdb_strict": false,
+    "pdb_source_dir": "",
+    "interpro_entries": ""
+}

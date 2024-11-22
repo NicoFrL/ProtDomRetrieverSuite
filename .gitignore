@@ -1,0 +1,39 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Output directories and files that should be generated locally
+*_output/
+*_result_table.tsv
+*_domain_ranges.txt
+*_output_domains.fasta
+alphafold_structures/
+trimmed_structures/
+
+# Local configuration
+config.json

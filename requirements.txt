@@ -1,0 +1,14 @@
+# Core dependencies
+requests>=2.31.0  # HTTP library for API requests
+ttkthemes>=3.2.2  # GUI theming
+
+# Note: The following are from Python's standard library (no installation needed):
+# - tkinter (GUI framework, usually pre-installed)
+# - logging (for error and info logging)
+# - threading (for parallel processing)
+# - queue (for managing concurrent tasks)
+
+# Development dependencies (optional)
+pytest>=6.0      # For testing
+black>=22.0      # For code formatting
+flake8>=3.9      # For code linting
