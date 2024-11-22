@@ -34,7 +34,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "protdomretrieversuite=gui.main_gui:main",  # Entry point for CLI
+            "protdomretrieversuite=src.gui.main_gui:main" 
         ],
     },
     include_package_data=True,
