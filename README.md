@@ -134,7 +134,7 @@ The application automatically saves your last used configuration (input/output p
 **[SMART](http://smart.embl-heidelberg.de)** (e.g., `SM00002`)  
 **[SFLD](http://sfld.rbvi.ucsf.edu/archive/django/index.html)** (e.g., `SFLDF00001`)  
 **[SUPERFAMILY](https://supfam.org/SUPERFAMILY/)** (e.g., `SSF100879`)  
-**[NCBIfam](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/)** (e.g., `NF000124`)  
+**[NCBIfam](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/)** (e.g., `NF000124`)
 
 For more information about Protein Classification (family, domain, sequence feature) and Protein Signatures (patterns, profiles, fingerprints, hidden Markov models (HMMs)), [please visit EMBL-EBI tutorial](https://www.ebi.ac.uk/training/online/courses/protein-classification-intro-ebi-resources/protein-classification/why-classify-proteins/).
 
