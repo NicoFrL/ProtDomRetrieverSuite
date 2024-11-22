@@ -146,7 +146,7 @@ protdomretrieversuite
 ```
 ### Using the Interface
 1. Select an input file containing UniProtKB accessions (one per line)
-    ```
+
     # Example input file:
         Q02201
         P12345
@@ -157,6 +157,7 @@ protdomretrieversuite
     # Example InterPro entries:
     IPR018159
     SSF46966
+    
     # or
     IPR018159, SSF46966
     ```
