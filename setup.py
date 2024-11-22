@@ -1,6 +1,5 @@
-from setuptools import find_namespace_packages
+from setuptools import setup, find_namespace_packages
 
-# Read the long description from the README file
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -13,7 +12,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/NicoFrL/ProtDomRetrieverSuite",
-    package_dir={"": "src"},  # Map the root package to the `src` directory
+    package_dir={"": "src"},
     packages=find_namespace_packages(where="src"),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -34,7 +33,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "protdomretrieversuite=src.gui.main_gui:main" 
+            "protdomretrieversuite=src.gui.main_gui:main",
         ],
     },
     include_package_data=True,
