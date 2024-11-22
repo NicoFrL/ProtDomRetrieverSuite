@@ -34,12 +34,13 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 ## Table of Contents
 1. [Features](#features)
 2. [Quick Installation](#quick-installation)
-3. [Usage](#usage)
-4. [Examples](#examples)
-5. [Support](#support)
-6. [License](#license)
-7. [Acknowledgments](#acknowledgments)
-8. [Development Notes](#development-notes)
+3. [Quick Start](#quick-installation-start)
+4. [Usage](#usage)
+5. [Examples](#examples)
+6. [Support](#support)
+7. [License](#license)
+8. [Acknowledgments](#acknowledgments)
+9. [Development Notes](#development-notes)
 
 ---
 
@@ -120,21 +121,20 @@ The application automatically saves your last used configuration (input/output p
 
 ## Usage
 
-    **[InterPro](https://www.ebi.ac.uk/training/online/courses/interpro-functional-and-structural-analysis/what-is-an-interpro-entry/interpro-entry-types/)** (e.g., `IPR000001`)  
-    **[CATH-Gene3D](https://www.cathdb.info)** (e.g., `G3DSA:1.10.10.10`)  
-    **[CDD](https://www.ncbi.nlm.nih.gov/cdd/)** (e.g., `cd00001`)  
-    **[HAMAP](https://hamap.expasy.org)** (e.g., `MF_00001`)  
-    **[PANTHER](https://pantherdb.org)** (e.g., `PTHR10000`)  
-    **[Pfam](http://pfam.xfam.org)** (e.g., `PF00001`)  
-    **[PIRSF](https://proteininformationresource.org/pirsf/)** (e.g., `PIRSF000005`)  
-    **[PRINTS](https://interpro-documentation.readthedocs.io/en/latest/prints.html)** (e.g., `PR00001`)  
-    **[PROSITE Patterns](https://prosite.expasy.org)** (e.g., `PS00001`)  
-    **[PROSITE Profiles](https://prosite.expasy.org)** (e.g., `PS01031`)  
-    **[SMART](http://smart.embl-heidelberg.de)** (e.g., `SM00002`)  
-    **[SFLD](http://sfld.rbvi.ucsf.edu/archive/django/index.html)** (e.g., `SFLDF00001`)  
-    **[SUPERFAMILY](https://supfam.org/SUPERFAMILY/)** (e.g., `SSF100879`)  
-    **[NCBIfam](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/)** (e.g., `NF000124`)  
-
+**[InterPro](https://www.ebi.ac.uk/training/online/courses/interpro-functional-and-structural-analysis/what-is-an-interpro-entry/interpro-entry-types/)** (e.g., `IPR000001`)  
+**[CATH-Gene3D](https://www.cathdb.info)** (e.g., `G3DSA:1.10.10.10`)  
+**[CDD](https://www.ncbi.nlm.nih.gov/cdd/)** (e.g., `cd00001`)  
+**[HAMAP](https://hamap.expasy.org)** (e.g., `MF_00001`)  
+**[PANTHER](https://pantherdb.org)** (e.g., `PTHR10000`)  
+**[Pfam](http://pfam.xfam.org)** (e.g., `PF00001`)  
+**[PIRSF](https://proteininformationresource.org/pirsf/)** (e.g., `PIRSF000005`)  
+**[PRINTS](https://interpro-documentation.readthedocs.io/en/latest/prints.html)** (e.g., `PR00001`)  
+**[PROSITE Patterns](https://prosite.expasy.org)** (e.g., `PS00001`)  
+**[PROSITE Profiles](https://prosite.expasy.org)** (e.g., `PS01031`)  
+**[SMART](http://smart.embl-heidelberg.de)** (e.g., `SM00002`)  
+**[SFLD](http://sfld.rbvi.ucsf.edu/archive/django/index.html)** (e.g., `SFLDF00001`)  
+**[SUPERFAMILY](https://supfam.org/SUPERFAMILY/)** (e.g., `SSF100879`)  
+**[NCBIfam](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/)** (e.g., `NF000124`)  
 
 For more information about Protein Classification (family, domain, sequence feature) and Protein Signatures (patterns, profiles, fingerprints, hidden Markov models (HMMs)), [please visit EMBL-EBI tutorial](https://www.ebi.ac.uk/training/online/courses/protein-classification-intro-ebi-resources/protein-classification/why-classify-proteins/).
 
