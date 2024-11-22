@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_namespace_packages
 
 # Read the long description from the README file
 with open("README.md", "r", encoding="utf-8") as fh:
