@@ -12,8 +12,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/NicoFrL/ProtDomRetrieverSuite",
+    packages=find_namespace_packages(include=['src*']),
     package_dir={"": "src"},
-    packages=find_namespace_packages(where="src"),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Science/Research",
