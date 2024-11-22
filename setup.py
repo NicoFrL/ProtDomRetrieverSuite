@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+# Read the long description from the README file
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -12,8 +13,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/NicoFrL/ProtDomRetrieverSuite",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=find_packages(where="src"),  # Locate all packages in the `src` directory
+    package_dir={"": "src"},  # Map the root package to the `src` directory
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Science/Research",
@@ -28,25 +29,14 @@ setup(
     ],
     python_requires=">=3.8",
     install_requires=[
-        "requests>=2.25.1",        # Required for API calls in both versions
-        "ttkthemes>=3.2.2",       # Required for GUI dark theme
+        "requests>=2.25.1",
+        "ttkthemes>=3.2.2",
     ],
     entry_points={
         "console_scripts": [
-            "protdomretrieversuite=src.gui.main_gui:main",             # GUI interface
+            "protdomretrieversuite=gui.main_gui:main",  # Entry point for CLI
         ],
     },
-    extras_require={
-        'dev': [
-            'pytest>=6.0',         # For testing
-            'black>=22.0',         # For code formatting
-            'flake8>=3.9',         # For code linting
-        ],
-    },
-    package_data={
-        'src': [
-            'config/*.json',        # For default configs
-        ],
-    },
+    include_package_data=True,
     zip_safe=False,
 )
