@@ -69,6 +69,8 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 - Improved error handling and recovery
 - Multi-threaded processing for better performance
 
+---
+
 ## System Requirements
 
 ### Hardware Requirements
@@ -213,7 +215,9 @@ The suite generates several output files, depending on the selected options:
 | `alphafold_structures/`  | A directory storing AlphaFold-predicted structures downloaded during analysis.        |
 | `trimmed_structures/`    | Stores PDB files trimmed to match the specific domain ranges.                         |
 | `trimming_summary.json`  | Trimming info, including timestamps, sources, number processed files and their paths. | 
-   
+
+---
+
 ## Performance Notes
 - Multi-threaded processing for efficient API requests
 - Rate limiting implemented to respect API guidelines
@@ -224,7 +228,7 @@ The suite generates several output files, depending on the selected options:
   - Having sufficient disk space for structure files
 
 ---
-   
+
 ## Examples
 Example datasets are provided in the `tests` directory:
 1. Test Dataset 1 (`input_test1.txt`, `entries_test1.txt`)
