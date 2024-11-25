@@ -84,10 +84,13 @@ If you're using macOS Sequoia (not earlier), you might see messages in the termi
 This is a diagnostic message from macOS Sequoia's input method system.
 It is harmless, does not affect functionality, and can be safely ignored.
 
-User reports indicate that this recent behavior affects not only Python programmers
+User reports indicate that this recent behavior affects not only Python programmers 
 but also users of GUI frameworks like wxPython and PyQt, as well as other 
-programming environments such as Java and Emacs. Resolving this issue will 
-likely require an update from Apple.
+programming environments such as Java and Emacs. Resolving this issue will likely 
+require an update from Apple.
+
+There might be workarounds to prevent this message from appearing, but they are not 
+advisable since they could interfere with the system's input method handling.
 
 #### Finding Python Installation
 ```bash
