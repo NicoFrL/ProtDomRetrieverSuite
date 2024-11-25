@@ -115,7 +115,21 @@ For detailed installation instructions, including system-specific setup and trou
 For instance, on macOS Sequoia 15.0+, `"Python[XXXXX:XXXXX] +[IMKInputSession subclass]: chose IMKInputSession_Legacy"`, this is a harmless message.
 
 ### Configuration
-The application automatically saves your last used configuration (input/output paths, selected options) to `config.json` and restores it on next launch for a smoother workflow.
+The application automatically saves your last used configuration (input/output paths, 
+selected options) to `config.json` and restores it on next launch for a smoother 
+workflow. An example configuration file `config.example.json` is provided in the repository.
+
+Configuration options:
+- `input_file`: Path to input file containing UniProtKB accessions
+- `output_dir`: Directory where analysis results will be saved
+- `enable_fasta_retrieval`: Download FASTA sequences with domain positions
+- `enable_af_download`: Download AlphaFold structures
+- `enable_pdb_trimming`: Enable domain-based PDB structure trimming
+- `accept_custom_pdbs`: Allow using custom PDB files
+- `custom_pdb_strict`: Strict validation for custom PDB files
+- `pdb_source_dir`: Directory containing custom PDB files
+- `interpro_entries`: InterPro entries for domain filtering (comma-separated)
+
 
 ---
 
