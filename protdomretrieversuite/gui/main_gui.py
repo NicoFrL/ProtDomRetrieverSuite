@@ -660,7 +660,7 @@ class ScientificGUI(ThemedTk):
                 self.enable_fasta_retrieval.set(config.get('enable_fasta_retrieval', False))
                 self.enable_af_download.set(config.get('enable_af_download', False))
                 self.enable_pdb_trimming.set(config.get('enable_pdb_trimming', False))
-                self.accept_custom_pdbs.set(config.get('accept_custom_pdbs', True))
+                self.accept_custom_pdbs.set(config.get('accept_custom_pdbs', False))
                 self.custom_pdb_strict.set(config.get('custom_pdb_strict', False))
                 self.pdb_source_dir.set(config.get('pdb_source_dir', ''))
                 
