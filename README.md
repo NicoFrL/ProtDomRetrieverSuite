@@ -5,7 +5,6 @@
   <img src="https://img.shields.io/badge/python-3.8%2B-blue" alt="Python Version">
   <img src="https://img.shields.io/badge/license-Custom%20Academic%20NonCommercial-brightgreen" alt="License">
 </div><br>
-
 ---
 ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphical interface and extended functionality for protein domain analysis. It retains core features, such as retrieving domain information from InterPro, while introducing support for AlphaFold structure downloads and domain-specific PDB structure processing.
 
