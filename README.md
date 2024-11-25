@@ -117,7 +117,7 @@ The application automatically saves your last used configuration (input/output p
 
 ## Usage
 
-### Preparing Input Data: 
+### Preparing Input Data:
 
 1. **Create an input file**: Prepare a `.txt` file containing a list of UniProtKB accessions in one column with no header. These accessions should correspond to the proteins you want to analyze. [UniprotKB accessions (Swiss-Prot/TrEMBL)](https://www.uniprot.org/help/accession_numbers) provide a universal protein numbering system to ensure accurate identification. 
 
@@ -127,7 +127,7 @@ The application automatically saves your last used configuration (input/output p
 Below are examples of protein classification databases and example entry formats ProtDomRetriever accepts.
 Use these as a reference when specifying InterPro entries to analyze:
 
-| **Database (with Link)**                | **Entry Format (Example)**                          |
+| **Database (with Link)**    | **Entry Format (Example)**                         |
 |-----------------------------|----------------------------------------------------|
 | [**InterPro**](https://www.ebi.ac.uk/training/online/courses/interpro-functional-and-structural-analysis/what-is-an-interpro-entry/interpro-entry-types/) | `IPR000001`                                       |
 | [**CATH-Gene3D**](https://www.cathdb.info)            | `G3DSA:1.10.10.10`                                |
@@ -157,8 +157,7 @@ protdomretrieversuite
     Q02201
     P12345
     A0AA96LI61
-    ```    
-        
+    ```
 2. Choose output directory for results (wherever you want on your computer)
 3. Enter InterPro entries for domain filtering (as indicated, one per line or separated by comma)
     ```
