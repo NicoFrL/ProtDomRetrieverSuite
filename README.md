@@ -33,7 +33,7 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 
 ## Table of Contents
 1. [Features](#features)
-2. [Quick Installation](#quick-installation-via-terminal)
+2. [Quick Installation](#quick-installation)
 3. [Quick Start](#quick-start)
 4. [Usage](#usage)
 5. [Examples](#examples)
@@ -81,8 +81,8 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 - Linux
 - Windows
 
-## Quick Installation (via Terminal)
-To get started, make sure you have **Python 3.8+** installed. You can install ProtDomRetrieverSuite in two ways:
+## Quick Installation
+To get started, make sure you have **Python 3.8+** installed. Open a terminal/command prompt and install ProtDomRetrieverSuite using either method:
 
 ### Option 1: Direct Installation from GitHub
 ```bash
@@ -109,7 +109,7 @@ The application automatically saves your last used configuration (input/output p
 
 
 ## Quick Start
-1. Launch the application (from the Terminal): `protdomretrieversuite`
+1. Launch the application in your terminal/command prompt: `protdomretrieversuite`
 2. Select example input from `tests/seed_test/input_test1.txt`
 3. Select an output folder `tests/seed_test/output/`
 4. Enter example entries from `tests/seed_test/entries_test1.txt`
@@ -117,7 +117,7 @@ The application automatically saves your last used configuration (input/output p
 
 ## Usage
 
-### Preparing Input Data : 
+### Preparing Input Data: 
 
 1. **Create an input file**: Prepare a `.txt` file containing a list of UniProtKB accessions in one column with no header. These accessions should correspond to the proteins you want to analyze. [UniprotKB accessions (Swiss-Prot/TrEMBL)](https://www.uniprot.org/help/accession_numbers) provide a universal protein numbering system to ensure accurate identification. 
 
@@ -152,11 +152,12 @@ protdomretrieversuite
 ```
 ### Using the Interface
 1. Select an input file containing UniProtKB accessions (one per line)
-
+    ```
     # Example input file:
         Q02201
         P12345
         A0AA96LI61
+    ```    
         
 2. Choose output directory for results (wherever you want on your computer)
 3. Enter InterPro entries for domain filtering (as indicated, one per line or separated by comma)
