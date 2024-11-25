@@ -35,14 +35,21 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 
 ## Table of Contents
 1. [Features](#features)
-2. [Quick Installation](#quick-installation)
-3. [Quick Start](#quick-start)
-4. [Usage](#usage)
-5. [Examples](#examples)
-6. [Support](#support)
-7. [License](#license)
-8. [Acknowledgments](#acknowledgments)
-9. [Development Notes](#development-notes)
+2. [System Requirements](#system-requirements)
+3. [Quick Installation](#quick-installation)
+4. [Quick Start](#quick-start)
+5. [Usage](#usage)
+   - [Preparing Input Data](#preparing-input-data)
+   - [Starting the Application](#starting-the-application)
+   - [Using the Interface](#using-the-interface)
+   - [Output Files](#output-files)
+6. [Performance Notes](#performance-notes)
+7. [Examples](#examples)
+8. [Support](#support)
+9. [Author](#author)
+10. [License](#license)
+11. [Acknowledgments](#acknowledgments)
+12. [Development Notes](#development-notes)
 
 ---
 
@@ -83,6 +90,8 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 - Linux
 - Windows
 
+---
+
 ## Quick Installation
 To get started, make sure you have **Python 3.8+** installed. Open a terminal/command prompt and install ProtDomRetrieverSuite using either method:
 
@@ -109,6 +118,7 @@ For instance, on macOS Sequoia 15.0+, `"Python[XXXXX:XXXXX] +[IMKInputSession su
 ### Configuration
 The application automatically saves your last used configuration (input/output paths, selected options) to `config.json` and restores it on next launch for a smoother workflow.
 
+---
 
 ## Quick Start
 1. Launch the application in your terminal/command prompt: `protdomretrieversuite`
@@ -116,6 +126,8 @@ The application automatically saves your last used configuration (input/output p
 3. Select an output folder `tests/seed_test/output/`
 4. Enter example entries from `tests/seed_test/entries_test1.txt`
 5. Choose an output directory and Press "▶ Run Analysis"! 
+
+---
 
 ## Usage
 
@@ -197,6 +209,8 @@ The suite generates several output files, depending on the selected options:
   - Breaking input into smaller batches
   - Ensuring stable internet connection
   - Having sufficient disk space for structure files
+
+---
    
 ## Examples
 Example datasets are provided in the `tests` directory:
@@ -204,6 +218,7 @@ Example datasets are provided in the `tests` directory:
 2. Test Dataset 2 (`input_test2.txt`, `entries_test2.txt`)
 3. Test Dataset 3 (`input_test3.txt`, `entries_test3.txt`)
 
+---
 
 ## Support
 If you encounter any issues or have questions, you can:
@@ -211,14 +226,20 @@ If you encounter any issues or have questions, you can:
 2. Open an issue on the [GitHub repository](https://github.com/NicoFrL/ProtDomRetrieverSuite/issues).
 3. Contact the developer directly through [GitHub](https://github.com/NicoFrL).
 
+---
+
 ## Author
 Nicolas-Frédéric Lipp, PhD  
 https://github.com/NicoFrL
+
+---
 
 ## License
 This project is distributed under **a Custom Academic and Non-Commercial License**.  
 It is free to use for educational, research, and non-profit purposes.  
 For commercial use, please refer to the [LICENSE](./LICENSE) file or contact the author for more information.
+
+---
 
 ## Acknowledgments
 
@@ -229,6 +250,7 @@ For commercial use, please refer to the [LICENSE](./LICENSE) file or contact the
 - [UniProt database](https://www.uniprot.org/help/about)  
   Comprehensive protein information with [programmatic access details](https://www.uniprot.org/help/programmatic_access).
 
+---
 
 ## Development Notes
 This project was developed with assistance from AI language models to enhance code structure, adhere to best practices, and improve documentation. The scientific approach and core algorithm were entirely designed and implemented by the author.
