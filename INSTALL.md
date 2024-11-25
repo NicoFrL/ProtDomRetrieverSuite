@@ -76,6 +76,19 @@ deactivate
 
 ### macOS Setup
 
+### Note for macOS Users (macOS Sequoia 15.0+)
+If you're using macOS Sequoia (not earlier), you might see messages in the terminal like:
+```
+"Python[XXXXX:XXXXX] +[IMKInputSession subclass]: chose IMKInputSession_Legacy"
+```
+This is a diagnostic message from macOS Sequoia's input method system.
+It is harmless, does not affect functionality, and can be safely ignored.
+
+User reports indicate that this recent behavior affects not only Python programmers
+but also users of GUI frameworks like wxPython and PyQt, as well as other 
+programming environments such as Java and Emacs. Resolving this issue will 
+likely require an update from Apple.
+
 #### Finding Python Installation
 ```bash
 # Find Python installations

@@ -33,8 +33,8 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 
 ## Table of Contents
 1. [Features](#features)
-2. [Quick Installation](#quick-installation)
-3. [Quick Start](#quick-installation-start)
+2. [Quick Installation](#quick-installation-via-terminal)
+3. [Quick Start](#quick-start)
 4. [Usage](#usage)
 5. [Examples](#examples)
 6. [Support](#support)
@@ -81,7 +81,7 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 - Linux
 - Windows
 
-## Quick Installation
+## Quick Installation (via Terminal)
 To get started, make sure you have **Python 3.8+** installed. You can install ProtDomRetrieverSuite in two ways:
 
 ### Option 1: Direct Installation from GitHub
@@ -102,26 +102,14 @@ pip install .
 ```
 
 For detailed installation instructions, including system-specific setup and troubleshooting, see [INSTALL.md](INSTALL.md).
-
-### Note for macOS Users (macOS Sequoia 15.0+)
-If you're using macOS Sequoia (not earlier), you might see messages in the terminal like:
-```
-"Python[XXXXX:XXXXX] +[IMKInputSession subclass]: chose IMKInputSession_Legacy"
-```
-This is a diagnostic message from macOS Sequoia's input method system.
-It is harmless, does not affect functionality, and can be safely ignored.
-
-User reports indicate that this recent behavior affects not only Python programmers
-but also users of GUI frameworks like wxPython and PyQt, as well as other 
-programming environments such as Java and Emacs. Resolving this issue will 
-likely require an update from Apple.
+For instance, on macOS Sequoia 15.0+, `"Python[XXXXX:XXXXX] +[IMKInputSession subclass]: chose IMKInputSession_Legacy"`, this is a harmless message.
 
 ### Configuration
 The application automatically saves your last used configuration (input/output paths, selected options) to `config.json` and restores it on next launch for a smoother workflow.
 
 
 ## Quick Start
-1. Launch the application: `protdomretrieversuite`
+1. Launch the application (from the Terminal): `protdomretrieversuite`
 2. Select example input from `tests/seed_test/input_test1.txt`
 3. Select an output folder `tests/seed_test/output/`
 4. Enter example entries from `tests/seed_test/entries_test1.txt`
@@ -182,7 +170,7 @@ protdomretrieversuite
     ```
 4. Select optional processing steps:
    - FASTA sequence retrieval
-        ### Download one Fasta File with domain positions in the headers
+     - Download one Fasta File with domain positions in the headers
    - AlphaFold structure download
    - PDB structure trimming
 
