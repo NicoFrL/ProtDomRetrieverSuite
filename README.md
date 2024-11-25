@@ -154,9 +154,9 @@ protdomretrieversuite
 1. Select an input file containing UniProtKB accessions (one per line)
     ```
     # Example input file:
-        Q02201
-        P12345
-        A0AA96LI61
+    Q02201
+    P12345
+    A0AA96LI61
     ```    
         
 2. Choose output directory for results (wherever you want on your computer)
