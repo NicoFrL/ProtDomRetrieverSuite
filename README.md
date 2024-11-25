@@ -127,7 +127,7 @@ The application automatically saves your last used configuration (input/output p
 Below are examples of protein classification databases and example entry formats ProtDomRetriever accepts.
 Use these as a reference when specifying InterPro entries to analyze:
 
-| **Database (with link)**                | **Entry Format (Example)**                          |
+| **Database (with Link)**                | **Entry Format (Example)**                          |
 |-----------------------------|----------------------------------------------------|
 | [**InterPro**](https://www.ebi.ac.uk/training/online/courses/interpro-functional-and-structural-analysis/what-is-an-interpro-entry/interpro-entry-types/) | `IPR000001`                                       |
 | [**CATH-Gene3D**](https://www.cathdb.info)            | `G3DSA:1.10.10.10`                                |
