@@ -67,6 +67,8 @@ class ScientificGUI(ThemedTk):
         # Modern macOS-like color scheme
         self.colors = {
             'primary': '#007AFF',  # Apple Blue
+            'success': '#34C759',  # Apple Green
+            'danger': '#FF3B30',   # Apple Red
             'background': '#292929',  # Dark gray background
             'card': '#333333',  # Slightly lighter gray for cards
             'border': '#404040',  # Border color
@@ -181,9 +183,9 @@ class ScientificGUI(ThemedTk):
             button_frame,
             text="⏹ Stop",
             font=('SF Pro Display', 12, 'bold'),
-            bg=self.colors['primary'],
+            bg=self.colors['danger'], # Red for stop, there's no danger :)
             fg='#000000',
-            activebackground='#0056b3',
+            activebackground='#CC3340',
             activeforeground='#000000',
             disabledforeground='#FFFFFF',  # Try white for better visibility when disabled
             relief='flat',
@@ -200,9 +202,9 @@ class ScientificGUI(ThemedTk):
             button_frame,
             text="▶ Run Analysis",
             font=(self.custom_font[0], self.custom_font[1], 'bold'),
-            bg=self.colors['primary'],
+            bg=self.colors['success'], # Green for run
             fg='#000000',  # Black text
-            activebackground='#0056b3',  # Darker blue on hover
+            activebackground='#248A3D',  # Darker green on hover
             activeforeground='#000000',
             relief='flat',
             padx=20,
