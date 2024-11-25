@@ -104,39 +104,57 @@ pip install .
 For detailed installation instructions, including system-specific setup and troubleshooting, see [INSTALL.md](INSTALL.md).
 
 ### Note for macOS Users (macOS Sequoia 15.0+)
-If you're using macOS Sequoia, you might see messages in the terminal like:
+If you're using macOS Sequoia (not earlier), you might see messages in the terminal like:
 ```
 "Python[XXXXX:XXXXX] +[IMKInputSession subclass]: chose IMKInputSession_Legacy"
 ```
-This is a diagnostic message from macOS Sequoia's input method system. It is harmless, does not affect functionality, and can be safely ignored.
+This is a diagnostic message from macOS Sequoia's input method system.
+It is harmless, does not affect functionality, and can be safely ignored.
+
+User reports indicate that this recent behavior affects not only Python programmers
+but also users of GUI frameworks like wxPython and PyQt, as well as other 
+programming environments such as Java and Emacs. Resolving this issue will 
+likely require an update from Apple.
 
 ### Configuration
 The application automatically saves your last used configuration (input/output paths, selected options) to `config.json` and restores it on next launch for a smoother workflow.
 
+
 ## Quick Start
 1. Launch the application: `protdomretrieversuite`
 2. Select example input from `tests/seed_test/input_test1.txt`
-3. Enter example entries from `tests/seed_test/entries_test1.txt`
-4. Choose an output directory and Press "▶ Run Analysis"! 
+3. Select an output folder `tests/seed_test/output/`
+4. Enter example entries from `tests/seed_test/entries_test1.txt`
+5. Choose an output directory and Press "▶ Run Analysis"! 
 
 ## Usage
 
-Here are examples of entries that can be reach on InterPro database: 
+### Preparing Input Data : 
 
-**[InterPro](https://www.ebi.ac.uk/training/online/courses/interpro-functional-and-structural-analysis/what-is-an-interpro-entry/interpro-entry-types/)** (e.g., `IPR000001`)  
-**[CATH-Gene3D](https://www.cathdb.info)** (e.g., `G3DSA:1.10.10.10`)  
-**[CDD](https://www.ncbi.nlm.nih.gov/cdd/)** (e.g., `cd00001`)  
-**[HAMAP](https://hamap.expasy.org)** (e.g., `MF_00001`)  
-**[PANTHER](https://pantherdb.org)** (e.g., `PTHR10000`)  
-**[Pfam](http://pfam.xfam.org)** (e.g., `PF00001`)  
-**[PIRSF](https://proteininformationresource.org/pirsf/)** (e.g., `PIRSF000005`)  
-**[PRINTS](https://interpro-documentation.readthedocs.io/en/latest/prints.html)** (e.g., `PR00001`)  
-**[PROSITE Patterns](https://prosite.expasy.org)** (e.g., `PS00001`)  
-**[PROSITE Profiles](https://prosite.expasy.org)** (e.g., `PS01031`)  
-**[SMART](http://smart.embl-heidelberg.de)** (e.g., `SM00002`)  
-**[SFLD](http://sfld.rbvi.ucsf.edu/archive/django/index.html)** (e.g., `SFLDF00001`)  
-**[SUPERFAMILY](https://supfam.org/SUPERFAMILY/)** (e.g., `SSF100879`)  
-**[NCBIfam](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/)** (e.g., `NF000124`)
+1. **Create an input file**: Prepare a `.txt` file containing a list of UniProtKB accessions in one column with no header. These accessions should correspond to the proteins you want to analyze. [UniprotKB accessions (Swiss-Prot/TrEMBL)](https://www.uniprot.org/help/accession_numbers) provide a universal protein numbering system to ensure accurate identification. 
+
+2. **Select InterPro features**: Decide which type of protein features you want to analyze either from the InterPro database or its consortium member databases.
+
+#### Examples of Databases and Entries
+Below are examples of protein classification databases and example entry formats ProtDomRetriever accepts.
+Use these as a reference when specifying InterPro entries to analyze:
+
+| **Database (with link)**                | **Entry Format (Example)**                          |
+|-----------------------------|----------------------------------------------------|
+| [**InterPro**](https://www.ebi.ac.uk/training/online/courses/interpro-functional-and-structural-analysis/what-is-an-interpro-entry/interpro-entry-types/) | `IPR000001`                                       |
+| [**CATH-Gene3D**](https://www.cathdb.info)            | `G3DSA:1.10.10.10`                                |
+| [**CDD**](https://www.ncbi.nlm.nih.gov/cdd/)          | `cd00001`                                         |
+| [**HAMAP**](https://hamap.expasy.org)                | `MF_00001`                                        |
+| [**PANTHER**](https://pantherdb.org)                 | `PTHR10000`                                       |
+| [**Pfam**](http://pfam.xfam.org)                     | `PF00001`                                         |
+| [**PIRSF**](https://proteininformationresource.org/pirsf/) | `PIRSF000005`                                     |
+| [**PRINTS**](https://interpro-documentation.readthedocs.io/en/latest/prints.html) | `PR00001`                                         |
+| [**PROSITE Patterns**](https://prosite.expasy.org)   | `PS00001`                                         |
+| [**PROSITE Profiles**](https://prosite.expasy.org)   | `PS01031`                                         |
+| [**SMART**](http://smart.embl-heidelberg.de)         | `SM00002`                                         |
+| [**SFLD**](http://sfld.rbvi.ucsf.edu/archive/django/index.html) | `SFLDF00001`                                      |
+| [**SUPERFAMILY**](https://supfam.org/SUPERFAMILY/)   | `SSF100879`                                       |
+| [**NCBIfam**](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/) | `NF000124`                                        |
 
 For more information about Protein Classification (family, domain, sequence feature) and Protein Signatures (patterns, profiles, fingerprints, hidden Markov models (HMMs)), [please visit EMBL-EBI tutorial](https://www.ebi.ac.uk/training/online/courses/protein-classification-intro-ebi-resources/protein-classification/why-classify-proteins/).
 
