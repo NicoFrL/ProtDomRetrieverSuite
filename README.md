@@ -117,7 +117,7 @@ For instance, on macOS Sequoia 15.0+, `"Python[XXXXX:XXXXX] +[IMKInputSession su
 ### Configuration
 The application automatically saves your last used configuration (input/output paths, 
 selected options) to `config.json` and restores it on next launch for a smoother 
-workflow. An example configuration file `config.example.json` is provided in the repository.
+workflow. An example configuration file [`config.example.json`](config.example.json) is provided in the repository.
 
 Configuration options:
 - `input_file`: Path to input file containing UniProtKB accessions
