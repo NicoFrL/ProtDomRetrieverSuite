@@ -184,7 +184,7 @@ class ScientificGUI(ThemedTk):
             text="⏹ Stop",
             font=('SF Pro Display', 12, 'bold'),
             bg=self.colors['primary'],
-            fg=self.colors['danger'],
+            fg=self.colors['danger'], # red text
             activebackground='#0056b3',
             activeforeground='#000000',
             disabledforeground='#FFFFFF',  # Try white for better visibility when disabled
@@ -203,7 +203,7 @@ class ScientificGUI(ThemedTk):
             text="▶ Run Analysis",
             font=(self.custom_font[0], self.custom_font[1], 'bold'),
             bg=self.colors['primary'],
-            fg=self.colors['sucess'],  # Black text
+            fg=self.colors['success'],  # green text
             activebackground='#0056b3',  # Darker blue on hover
             activeforeground='#000000',
             relief='flat',
