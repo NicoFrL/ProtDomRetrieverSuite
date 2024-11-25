@@ -14,7 +14,6 @@ ProtDomRetrieverSuite builds on ProtDomRetriever, adding a comprehensive graphic
 
 ---
 
-
 <div align="center">
   <img src="assets/prot_dom_retriever_illustation.png" alt="ProtDomRetriever Illustration" style="height:400px; margin-right:10px;">
   <img src="assets/gui_screenshot.png" alt="GUI Screenshot" style="height:400px;">
