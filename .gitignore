@@ -27,6 +27,9 @@ Thumbs.db
 *.log
 *.sqlite
 
+#Local development Scripts
+setup_project.sh 
+
 # Output directories and files that should be generated locally
 *_output/
 *_result_table.tsv
