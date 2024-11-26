@@ -127,11 +127,9 @@ sudo dnf install python3-tkinter
 ### Common Issues
 
 1. **Missing tkinter**
-   - Follow system-specific installation instructions above.
-   - Verify installation:  
-     `python3 -c "import tkinter; tkinter._test()"`
-     or:
-     `python3 -c "import tkinter; tkinter._test()"`
+   - Follow system-specific installation instructions above
+   - Verify installation: `python3 -c "import tkinter; tkinter._test()"`  
+                      or: `python3 -c "import tkinter; tkinter._test()"`
 
 2. **SSL Certificate Errors**
    - Ensure Python installation has SSL support
