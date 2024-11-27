@@ -173,7 +173,7 @@ Use these as a reference when specifying InterPro entries to analyze:
 | [**SUPERFAMILY**](https://supfam.org/SUPERFAMILY/)   | `SSF100879`                                       |
 | [**NCBIfam**](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/) | `NF000124`                                        |
 
-For more information about Protein Classification (family, domain, sequence feature) and Protein Signatures (patterns, profiles, fingerprints, hidden Markov models (HMMs)), [please visit EMBL-EBI tutorial](https://www.ebi.ac.uk/training/online/courses/protein-classification-intro-ebi-resources/protein-classification/why-classify-proteins/).
+For more information about Protein Classification (family, domain, sequence feature) and Protein Signatures (patterns, profiles, fingerprints, hidden Markov models (HMMs)), [please visit EMBL-EBI tutorial](https://www.ebi.ac.uk/training/online/courses/protein-classification-intro-ebi-resources/#vf-tabs__section--contents).
 
 ### Starting the Application
 ```bash
