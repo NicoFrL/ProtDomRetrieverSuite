@@ -115,12 +115,12 @@ class InterProProcessor(BaseProcessor):
         
         # Final selected domains and their entries
         selected_domains = []
-        entry_domain_map = {}  # Map entries to their domain numbers
+        temp_domain_map = {}  # (Temp) Map entries to their domain numbers
         domain_counter = 1  # Give each domain a unique number
         
         def domains_overlap(d1, d2):
             return not (d1[1] < d2[0] or d1[0] > d2[1])
-
+        # Select domains using length-priority logic
         for domain in all_domains:
             # Check if this domain overlaps with any selected domain
             overlap = False
@@ -132,25 +132,57 @@ class InterProProcessor(BaseProcessor):
             if not overlap:
                 selected_domains.append(domain)
                 entry = entries_by_domain[domain]
-                if entry not in entry_domain_map:
-                    entry_domain_map[entry] = []
-                entry_domain_map[entry].append(f"d{domain_counter}")
+                if entry not in temp_domain_map:
+                    temp_domain_map[entry] = []
+                # Store the original selection order
+                temp_domain_map[entry].append((domain_counter, domain))
                 domain_counter += 1
-
-        # Format the entry string with domain numbers
+        
+        # Reorder selected domains by position
+        # Create a list of (domain, original_number) tuples
+         
+        ordered_domains = [(d, next(num for entry_domains in temp_domain_map.values()
+                                    for num, dom in entry_domains if dom == d))
+                            for d in selected_domains]
+        ordered_domains.sort(key=lambda x: x[0][0])  # Sort by start position
+        
+        #Create final maps with position-based ordering
+        entry_domain_map = {}
+        final_domains = []
+        domain_positions = {}  # Map original numbers to new positions
+        
+        for new_idx, (domain, orig_num) in enumerate(ordered_domains, 1):
+            final_domains.append(domain)
+            entry = entries_by_domain[domain]
+            if entry not in entry_domain_map:
+                entry_domain_map[entry] = []
+            entry_domain_map[entry].append(f"d{new_idx}")
+            domain_positions[orig_num] = new_idx
+        
+        # Format entry string with properly ordered domains
         entry_parts = []
-        for entry, domain_nums in entry_domain_map.items():
+        # Get the first domain position for each entry to determine entry order
+        entry_positions = {}
+        for entry, domain_info in temp_domain_map.items():
+            first_domain = min(domain[0] for domain_counter, domain in domain_info)
+            entry_positions[entry] = first_domain
+            
+        # Sort entries by their first domain position
+        sorted_entries = sorted(temp_domain_map.keys(), key=lambda e: entry_positions[e])
+        
+        for entry in sorted_entries:
+            domain_info = temp_domain_map[entry]
             ranges = []
-            for domain_num in domain_nums:
-                idx = int(domain_num[1:]) - 1
-                start, end = selected_domains[idx]
-                ranges.append(f"{domain_num}:[{start},{end}]")
+            for orig_num, domain in domain_info:
+                new_num = domain_positions[orig_num]
+                ranges.append(f"d{new_num}:[{domain[0]},{domain[1]}]")
+            ranges.sort(key=lambda x: int(x.split('d')[1].split(':')[0]))  # Sort by new domain number
             entry_parts.append(f"{entry} ({','.join(ranges)})")
         
         entry_string = " + ".join(entry_parts)
         
         # Log domain selection results
-        if selected_domains:
+        if final_domains:
             self.logger.info(f"Selected domains from entries: {entry_string} in {accession}")
         else:
             self.logger.info(f"No domains found for {accession}")
@@ -162,7 +194,7 @@ class InterProProcessor(BaseProcessor):
                     'start': domain[0],
                     'end': domain[1]
                 }
-                for domain in selected_domains
+                for domain in final_domains
             ],
             'entry_string': entry_string,
             'entry_map': entry_domain_map
