@@ -33,7 +33,7 @@ jobs:
 
     - name: Run security checks
       run: |
-        bandit -r . -c pyproject.toml
+        bandit -r .
 
   security:
     runs-on: ubuntu-latest
