@@ -20,6 +20,7 @@ class FastaConfig(ProcessorConfig):
     uniprot_api_url: str = "https://rest.uniprot.org/idmapping"
     job_check_interval: int = 5
     chunk_size: int = 500
+    job_timeout: int = 3600
 
 class FastaProcessor(BaseProcessor):
     """Handles UniProt FASTA sequence retrieval and processing"""
@@ -82,9 +83,12 @@ class FastaProcessor(BaseProcessor):
         }
         
         try:
-            response = requests.post(url, data=data)
+            response = requests.post(url, data=data, timeout=self.config.timeout)
             response.raise_for_status()
             return response.json()['jobId']
+        except requests.Timeout:
+            self.logger.warning(f"Request timed out")
+            raise APIError("UniProt job submission timed out")
         except requests.RequestException as e:
             raise APIError(f"Failed to submit UniProt job: {e}")
 
@@ -95,7 +99,7 @@ class FastaProcessor(BaseProcessor):
         
         while True:
             try:
-                response = requests.get(check_url)
+                response = requests.get(check_url, timeout=self.config.timeout)
                 response.raise_for_status()
                 status = response.json()
                 
@@ -105,12 +109,12 @@ class FastaProcessor(BaseProcessor):
                 elif 'results' in status or 'failedIds' in status:
                     return True
 
-                if time.time() - start_time > self.config.timeout:
-                    raise APIError(f"Job timed out after {self.config.timeout} seconds")
+                if time.time() - start_time > self.config.job_timeout:
+                    raise APIError(f"Job timed out after {self.config.job_timeout} seconds")
                 
                 # Update progress periodically
                 elapsed = time.time() - start_time
-                progress = min(95, (elapsed / self.config.timeout) * 100)
+                progress = min(95, (elapsed / self.config.job_timeout) * 100)
                 self.update_status(f"Waiting for job completion ({int(elapsed)}s)", 20 + progress * 0.2)
                 
                 time.sleep(self.config.job_check_interval)
@@ -122,7 +126,7 @@ class FastaProcessor(BaseProcessor):
         """Retrieve results from completed UniProt job"""
         try:
             details_url = f"{self.config.uniprot_api_url}/details/{job_id}"
-            response = requests.get(details_url)
+            response = requests.get(details_url, timeout=self.config.timeout)
             response.raise_for_status()
             details = response.json()
             
@@ -140,7 +144,7 @@ class FastaProcessor(BaseProcessor):
             page = 1
             
             while True:
-                response = requests.get(results_url, params=params)
+                response = requests.get(results_url, params=params, timeout=self.config.timeout)
                 response.raise_for_status()
                 
                 content = response.text

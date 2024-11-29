@@ -15,7 +15,7 @@ if sys.platform == "win32":
         import ctypes
         ctypes.windll.shcore.SetProcessDpiAwareness(1)  # System DPI Awareness
     except Exception as e:
-        pass  # Handle exceptions if necessary
+        logger.warning(f"Failed to set DPI awareness: {e}")  # Log the error but continue
 
 # Third-party imports
 from ttkthemes import ThemedTk
