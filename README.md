@@ -3,6 +3,7 @@
 <div align="center">
   <img src="https://github.com/NicoFrL/ProtDomRetrieverSuite/actions/workflows/build.yml/badge.svg" alt="Build Status">
   <img src="https://img.shields.io/badge/python-3.8%2B-blue" alt="Python Version">
+  <img src="https://img.shields.io/badge/security-passed-green.svg" alt="Security Status">
   <img src="https://img.shields.io/badge/license-Custom%20Academic%20NonCommercial-brightgreen" alt="License">
 </div>
 
